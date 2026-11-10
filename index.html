@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova-Plus Lifesciences | Advancing Healthcare through Safe & Effective Medicine</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medicalBlue: '#0f2b48',
+                        bioTeal: '#0d9488',
+                        lightBlueGlow: '#e0f2fe'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .perspective-3d {
+            perspective: 1200px;
+        }
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+        .glass-nav {
+            background: rgba(15, 43, 72, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .tilt-card {
+            transition: transform 0.1s ease, box-shadow 0.3s ease;
+        }
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px) rotate3d(1, 1, 1, 0deg); }
+            50% { transform: translateY(-15px) rotate3d(1, 1, 1, 2deg); }
+            100% { transform: translateY(0px) rotate3d(1, 1, 1, 0deg); }
+        }
+        .animate-float-slow {
+            animation: floatAnimation 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav text-white border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <span class="text-3xl text-bioTeal font-bold">⚚ Nova-Plus</span>
+                <span class="text-xs uppercase tracking-widest text-slate-400 block">Lifesciences</span>
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#portfolio" class="hover:text-bioTeal transition-colors">Portfolio</a>
+                <a href="#symptom-matcher" class="hover:text-bioTeal transition-colors">Symptom Matcher</a>
+                <a href="#b2b-calculator" class="hover:text-bioTeal transition-colors">B2B Calculator</a>
+                <a href="#compliance" class="hover:text-bioTeal transition-colors">Compliance</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:0302-9278899" class="text-sm font-semibold bg-slate-800/80 px-4 h-10 flex items-center rounded-full border border-slate-700 hover:border-bioTeal transition-colors">📞 0302-9278899</a>
+                <a href="#contact" class="bg-bioTeal hover:bg-teal-700 text-white font-semibold px-5 h-10 flex items-center rounded-full shadow-lg shadow-teal-900/20 transition-all">B2B Inquiry</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-medicalBlue via-slate-900 to-slate-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="inline-flex items-center bg-bioTeal/20 text-bioTeal rounded-full px-4 py-1 text-xs font-bold uppercase tracking-wider border border-bioTeal/30">WHO-GMP & AYUSH Approved Standards</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">Trusted Medicines for a <span class="text-bioTeal">Healthier Tomorrow</span></h1>
+                <p class="text-slate-300 text-lg leading-relaxed">Under our enduring mission, <strong>"Advancing Healthcare through Safe & Effective Medicine,"</strong> Nova-Plus Lifesciences manufactures standardized oral syrups and targeted sachets formulated to stringent global pharmaceutical thresholds.</p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#portfolio" class="bg-bioTeal hover:bg-teal-700 text-white px-8 py-3.5 rounded-full font-bold shadow-xl transition-all">Explore Portfolio</a>
+                    <a href="#b2b-calculator" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-8 py-3.5 rounded-full font-bold transition-all">Partner Portal</a>
+                </div>
+            </div>
+            <!-- 3D Drift Showcase Stack -->
+            <div class="relative h-[450px] flex items-center justify-center perspective-3d hidden lg:flex">
+                <div class="w-72 h-96 bg-gradient-to-br from-bioTeal/20 to-medicalBlue/40 border border-bioTeal/40 rounded-2xl p-6 glass-card preserve-3d animate-float-slow shadow-2xl flex flex-col justify-between text-center">
+                    <div class="text-5xl">🧴</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Premium Syrups & Sachets</h4>
+                        <p class="text-xs text-slate-300">Formulated with premium pharmaceutical components for optimal bioavailability.</p>
+                    </div>
+                    <div class="text-xs font-mono text-bioTeal">NOVA-PLUS LIFE SCIENCE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Symptom Matcher -->
+    <section id="symptom-matcher" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-bioTeal font-bold uppercase tracking-wider text-xs">Interactive Clinical Filter</span>
+                <h2 class="text-3xl font-bold mt-2 text-medicalBlue">Dynamic Symptom-to-Medicine Matcher</h2>
+                <p class="text-slate-600 mt-3">Select a clinical symptom profile below to instantly isolate the targeted Nova-Plus formulation engineered to treat it.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button onclick="filterSymptom('all')" class="symptom-btn bg-medicalBlue text-white font-semibold px-5 py-2.5 rounded-full transition-all text-sm border border-transparent shadow-md">All Formulations</button>
+                <button onclick="filterSymptom('cough')" class="symptom-btn bg-white hover:bg-slate-50 text-slate-700 font-semibold px-5 py-2.5 rounded-full transition-all text-sm border border-slate-200 shadow-sm">Cough & Congestion</button>
+                <button onclick="filterSymptom('anemia')" class="symptom-btn bg-white hover:bg-slate-50 text-slate-700 font-semibold px-5 py-2.5 rounded-full transition-all text-sm border border-slate-200 shadow-sm">Anemia & Low Hemoglobin</button>
+                <button onclick="filterSymptom('acid')" class="symptom-btn bg-white hover:bg-slate-50 text-slate-700 font-semibold px-5 py-2.5 rounded-full transition-all text-sm border border-slate-200 shadow-sm">Heartburn & Gastritis</button>
+                <button onclick="filterSymptom('vitamin')" class="symptom-btn bg-white hover:bg-slate-50 text-slate-700 font-semibold px-5 py-2.5 rounded-full transition-all text-sm border border-slate-200 shadow-sm">Nutritional Deficiencies</button>
+                <button onclick="filterSymptom('uti')" class="symptom-btn bg-white hover:bg-slate-50 text-slate-700 font-semibold px-5 py-2.5 rounded-full transition-all text-sm border border-slate-200 shadow-sm">Urinary Tract Health</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maximized Product Showcase Grid (3D Tilt & Glow Configured) -->
+    <section id="portfolio" class="py-20 perspective-3d">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-bioTeal font-bold uppercase tracking-wider text-xs">Formulation Portfolio</span>
+                    <h2 class="text-3xl font-bold mt-2 text-medicalBlue">Maximized Product Showcase</h2>
+                </div>
+                <div class="mt-4 md:mt-0 flex space-x-2 bg-slate-200 p-1 rounded-lg">
+                    <button onclick="filterCategory('all')" class="cat-btn bg-white text-medicalBlue font-bold px-4 py-2 rounded-md text-xs transition-all shadow-sm">All Formulations (5)</button>
+                    <button onclick="filterCategory('syrup')" class="cat-btn hover:bg-white text-slate-600 font-bold px-4 py-2 rounded-md text-xs transition-all">Syrups Division</button>
+                    <button onclick="filterCategory('sachet')" class="cat-btn hover:bg-white text-slate-600 font-bold px-4 py-2 rounded-md text-xs transition-all">Sachets Division</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                
+                <!-- Product 1: BroCo -->
+                <div class="prod-card glass-card rounded-2xl p-6 shadow-xl relative preserve-3d tilt-card overflow-hidden" data-category="syrup" data-symptom="cough">
+                    <div class="absolute inset-0 bg-gradient-to-br from-sky-400/0 to-sky-400/0 transition-all duration-300 pointer-events-none card-glow"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Syrup • Sugar Free</span>
+                        <span class="text-slate-400 text-sm font-bold">120ml</span>
+                    </div>
